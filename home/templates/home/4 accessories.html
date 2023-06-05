@@ -20,71 +20,15 @@
       <h1>Accessories Deals</h1>
       </div>
       <div class="row text-center">
+        {% for a in accessorie %}
         <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/a1.png'%}" alt="Accessories" width="300" height="300"></a>
-          <h5>Bose Lifestyle 600 Home Entertainment Speaker System</h5>
-          <p class="text-muted">Direct/reflecting satellite speakers with angled transducers
-            Compact, 6" centre channel speaker
-            5.1-Channel Configuration
-            Bluetooth & Wi-Fi Music Streaming</p>
+          <a href="#"><img src="{{ a.img.url }}" alt="Accessories" width="300" height="300"></a>
+          <h5>{{ a.title }}</h5>
+          <p class="text-muted">{{ a.description }}</p>
             <hr>
-            <h4 class="text-danger">282,000 Taka</h4>
+            <h4 class="text-danger">{{ a.price }} Taka</h4>
         </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/a2.png'%}" alt="Accessories" width="300" height="300"></a>
-          <h5>AKG C414 XLS Large-diaphragm Multipattern Microphone</h5>
-          <p class="text-muted">For Voice, Instruments, Drums & Cabs
-            Nine Selectable Polar Patterns
-            1" Capsule Maintains C414 B-ULS Sound
-            Completely Immune to EMI and ESI</p>
-            <hr>
-            <h4 class="text-danger">133,000 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/a3.png'%}" alt="Accessories" width="300" height="300"></a>
-          <h5>Razer BlackShark V2 Pro Rainbow Six Siege Special Edition Wireless</h5>
-          <p class="text-muted">Razer HyperSpeed Wireless
-            Razer TriForce Titanium 50mm Drivers
-            Razer HyperClear Supercardioid Mic
-            Compatible: PC, Mac, PS4, Nintendo Switch</p>
-            <hr>
-            <h4 class="text-danger">21,700 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/a4.png'%}" alt="Accessories" width="300" height="300"></a>
-          <h5>Razer Viper Ultimate RGB Gaming Mouse with Charging Dock</h5>
-          <p class="text-muted">Razer Hyperspeed Wireless technology
-            Razer Focus+ Optical Sensor
-            Razer Optical Mouse Switches
-            74g lightweight design</p>
-            <hr>
-            <h4 class="text-danger">15,800 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/a5.png'%}" alt="Accessories" width="300" height="300"></a>
-          <h5>Logitech G PRO Tenkeyless RGB Mechanical Gaming Keyboard</h5>
-          <p class="text-muted">Pro-inspired tenkeyless design
-            GX Blue Clicky mechanical switches
-            1.8 m detachable cable
-            12 programmable F-keys, 1 ms report rate</p>
-            <hr>
-            <h4 class="text-danger">10,900 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/a6.png'%}" alt="Accessories" width="300" height="300"></a>
-          <h5>Logitech C922 Pro Full HD Webcam</h5>
-          <p class="text-muted">FOR STREAMING AND RECORDING
-            FULL HD 1080P AT 30FPS / 720P
-            60FPS STREAMING
-            AUTOMATIC LOW LIGHT</p>
-            <hr>
-            <h4 class="text-danger">11,800 Taka</h4>
-        </div>
+        {% endfor%}
       </div>
     </div>
   </main>

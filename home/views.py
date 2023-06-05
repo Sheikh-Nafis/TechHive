@@ -30,10 +30,14 @@ def monitor(request):
     return render(request, 'home/3 monitor.html',context)
 
 def accessories(request):
-    return render(request, 'home/4 accessories.html')
+    accessorie = Accessorie.objects.all()
+    context = {'accessorie':accessorie}
+    return render(request, 'home/4 accessories.html',context)
 
 def gadget(request):
-    return render(request, 'home/5 gadget.html')
+    gadget = Gadget.objects.all()
+    context = {'gadget':gadget}
+    return render(request, 'home/5 gadget.html',context)
 
 def component(request):
     component = Component.objects.all()
