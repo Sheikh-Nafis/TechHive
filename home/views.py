@@ -12,7 +12,9 @@ def homepage(request):
     return render(request, 'home/project.html')
 
 def desktop(request):
-    return render(request, 'home/1 desktop.html')
+    desktop = Desktop.objects.all()
+    context = {'desktop':desktop}
+    return render(request, 'home/1 desktop.html',context)
 
 def laptop(request):
     return render(request, 'home/2 laptop.html')
