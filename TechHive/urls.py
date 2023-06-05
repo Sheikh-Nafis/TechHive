@@ -48,6 +48,8 @@ urlpatterns = [
     path('header/',header),
     path('footer/',footer),
     path('search', search),
+    path('tv/',tv),
+    path('phone/', phone),
   # path('login2/',LoginPage,name='login2'),
   # path('home2/',HomePage,name='home2'),
   # path('logout2/',LogoutPage,name='logout2'),

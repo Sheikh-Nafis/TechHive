@@ -49,6 +49,16 @@ def gaming(request):
     context = {'game':game}
     return render(request, 'home/7 gaming.html', context)
 
+def phone(request):
+    phone = Phone.objects.all()
+    context = {'phone':phone}
+    return render(request,'home/phone.html',context)
+
+def tv(request):
+    tv = Tv.objects.all()
+    context = {'tv':tv}
+    return render(request,'home/tv.html',context)
+
 def contact(request):
     return render(request,'home/contact us.html')
 

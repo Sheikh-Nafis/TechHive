@@ -1,5 +1,5 @@
 from django.contrib import admin
-from.models import Game,Desktop,Laptop,Monitor,Component,Accessorie,Gadget
+from.models import Game,Desktop,Laptop,Monitor,Component,Accessorie,Gadget,Tv,Phone
 
 # Register your models here.
 
@@ -10,3 +10,5 @@ admin.site.register(Monitor)
 admin.site.register(Component)
 admin.site.register(Accessorie)
 admin.site.register(Gadget)
+admin.site.register(Tv)
+admin.site.register(Phone)
