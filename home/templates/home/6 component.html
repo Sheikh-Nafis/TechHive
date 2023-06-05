@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Components</title>
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bootstrap-5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+  {% include "home/header.html" %}
+  <main>
+    <div class="services bg-light text-center">
+      <div class="service mb-3 pt-4">
+      <h1>Component Deals</h1>
+      </div>
+      <div class="row text-center">
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/c1.png'%}" alt="Component" width="300" height="300"></a>
+          <h5>GIGABYTE AORUS GeForce RTX 4090 MASTER 24GB GDDR6X Graphics Card</h5>
+          <p class="text-muted">NVIDIA Ada Lovelace Streaming Multiprocessors
+            4th Gen Tensor Cores, 3rd Gen RT Cores
+            Memory Bus: 384 bit, Card Bus: PCI-E 4.0
+            Output: DisplayPort 1.4 x3, HDMI 2.1 x1</p>
+            <hr>
+            <h4 class="text-danger">300,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/c2.png'%}" alt="Component" width="300" height="300"></a>
+          <h5>AMD Ryzen 9 7950X Processor (Global Edition): Unleashing the Power of Innovation</h5>
+          <p class="text-muted">Clock Speed: 4.5GHz Up to 5.7GHz
+            Cores: 16, Threads: 32
+            L2 Cache: 16MB, L3 Cache: 64MB
+            Socket: AM5</p>
+            <hr>
+            <h4 class="text-danger">72,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/c3.png'%}" alt="Component" width="300" height="300"></a>
+          <h5>Asus ROG STRIX LC II ARGB 360MM CPU Cooler</h5>
+          <p class="text-muted">Fan: ROG FAN MODEL 12 ARGB
+            Water block dimension: 80 x 80 x 45 mm
+            AURA Sync Support: Yes
+            Compatible: Intel: LGA 1700, 1200, 115x, 2011, 2011-3, 2066, AMD: AM4, TR4</p>
+            <hr>
+            <h4 class="text-danger">31,450 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/c4.png'%}" alt="Component" width="300" height="300"></a>
+          <h5>MSI MEG X670E ACE DDR5 AMD AM5 E-ATX Motherboard</h5>
+          <p class="text-muted">Supported CPU: Ryzen 7000 Series Processors for Socket AM5
+            Supported RAM: 4x DDR5, Max 128GB
+            Graphics Output: 1x Type-C Display port
+            Features: 10G Super LAN with Wi-Fi 6E solution</p>
+            <hr>
+            <h4 class="text-danger">97,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/c5.png'%}" alt="Component" width="300" height="300"></a>
+          <h5>Corsair VENGEANCE RGB PRO SL 16GB (2x8GB) DDR4 3200MHz C16 RAM Kit</h5>
+          <p class="text-muted">Memory Type: DDR4
+            Memory Size: 16GB (2x8GB)
+            Number of Pins: 288 Pin
+            Tested Latency: 16-20-20-38</p>
+            <hr>
+            <h4 class="text-danger">8,400 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/c6.png'%}" alt="Component" width="300" height="300"></a>
+          <h5>Samsung 970 EVO Plus 1TB NVMe M.2 SSD: The Ultimate Storage Solution</h5>
+          <p class="text-muted">Capacity: 1TB
+            Form Factor: M.2 (2280)
+            Write Speed: 3,300 MB/s
+            Interface: PCIe Gen 3.0 x4, NVMe 1.3</p>
+            <hr>
+            <h4 class="text-danger">11,499 Taka</h4>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% include "home/footer.html" %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

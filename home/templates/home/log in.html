@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap-5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+  {% include "home/header.html" %}
+
+    <main>
+     
+        <div class="container text-center py-2">
+            <h1 class="text-warning">TechHive🐝</h1>
+            <hr>
+        </div>
+        {% for msg in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong></strong>{{ msg }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+         
+        {% endfor %}
+        <div class="bg-light text-center py-5">
+            <h1>Please Login</h1>
+                <!-- after action we need to use  method="post" -->
+            <form method="post">
+                <!-- connecting label and input by using id and name -->
+                <!-- using required so that user can't keep the input blank -->
+                {% csrf_token %} 
+                <div class="py-2">
+                  <p>Username:</p>
+                  <label for="username"></label>
+                 <input type="text" placeholder="Enter Username" id="username" name="username">
+                </div>
+                <div class="py-2">
+                <!-- password -->
+                  <p>Password:</p>
+                  <label for="password"></label>
+                  <input type="password" placeholder="Password" id="password" name="password" required>
+                </div>
+                <div class="p-2">
+                 <button type="submit" class="btn btn-primary"  >Continue</button>  <!-- href="{% url 'homepage' %}"  -->
+                </div>
+                
+                <div class="pt-3">
+                    Don't have an account?
+                </div>
+                <!-- <div class="pt-3">
+                  If you do not have an account with us, please register at the <a href="/register" class="text-primary">Register</a> page.
+                </div> -->
+                <div class="pt-3">
+                  If you do not have an account with us, please register at the <a href="/register" class="text-primary fw-bold text-decoration-none">Register</a> page.
+                </div>
+                
+                
+                    
+            </form>
+        </div>
+    </main>
+
+    {% include "home/footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

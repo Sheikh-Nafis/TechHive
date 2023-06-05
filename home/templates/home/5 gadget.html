@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gadget</title>
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bootstrap-5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+  {% include "home/header.html" %}
+  <main>
+    <div class="services bg-light text-center">
+      <div class="service mb-3 pt-4">
+      <h1>Gadget Deals</h1>
+      </div>
+      <div class="row text-center">
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/g1.png'%}" alt="Gadget" width="300" height="300"></a>
+          <h5>EcoFlow Smart Generator</h5>
+          <p class="text-muted">Rated Power: 1800W (1900W peak)
+            Integrates with DELTA Pro/Max
+            Efficiency First
+            Charge & Power</p>
+            <hr>
+            <h4 class="text-danger">155,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/g2.png'%}" alt="Gadget" width="300" height="300"></a>
+          <h5>DJI Mini 3 Pro Drone with RC Controller (Standard Version)</h5>
+          <p class="text-muted">1/1.3-Inch Sensor
+            Resolution: 4K/ 60fps
+            34-Minute Max Flight Time
+            Tri-Direction Obstacle Sensing</p>
+            <hr>
+            <h4 class="text-danger">130,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/g3.png'%}" alt="Gadget" width="300" height="300"></a>
+          <h5>Apple Watch Ultra GPS + Cellular 49mm Titanium Case</h5>
+          <p class="text-muted">Always-On Retina LTPO OLED display
+            S8 SiP with 64-bit dual-core processor
+            Dual speakers, Three-microphone array
+            100m water resistant, IP6X dust resistant</p>
+            <hr>
+            <h4 class="text-danger">104,900 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/g4.png'%}" alt="Gadget" width="300" height="300"></a>
+          <h5>Yamaha HS7 6.5" Powered Studio Monitor Speaker</h5>
+          <p class="text-muted">6.5" Cone Woofer
+            1" Dome Tweeter
+            95W Total Output
+            Room Control Response Switch</p>
+            <hr>
+            <h4 class="text-danger">70,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/g5.png'%}" alt="Gadget" width="300" height="300"></a>
+          <h5>Focusrite Clarett 8Pre USB 18-In, 20-Out Audio Interface</h5>
+          <p class="text-muted">Eight Air-enabled ultra-low noise Clarett mic pres
+            Ten 1/4-inch balanced jack outputs
+            Air mode with impedance switching
+            Class-leading 118dB dynamic range</p>
+            <hr>
+            <h4 class="text-danger">81,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/g6.png'%}" alt="Gadget" width="300" height="300"></a>
+          <h5>Apple AirPods Pro 2nd Generation</h5>
+          <p class="text-muted">Personalized Spatial Audio with dynamic head tracking
+            Active Noise Cancellation and Adaptive Transparency
+            Sweat and water resistant
+            Up to 6 hours of listening time</p>
+            <hr>
+            <h4 class="text-danger">27,500 Taka</h4>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% include "home/footer.html" %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

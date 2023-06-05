@@ -1,0 +1,133 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>    
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap-5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    {% include "home/header.html" %}
+      
+    <main>
+      <div class="container-fluid text-center py-2">
+        <h1>Welcome to TechHive 🐝</h1>
+        <hr>
+      </div>
+      <div class="container text-center pb-4">
+        <!-- <img src="{% static 'all images/slide.gif' %}" alt="Deals"> -->
+        {% include "home/slider.html" %}
+      </div>
+
+      <!-- categories -->
+      <div class="services bg-light text-center">
+        <!-- margin-bottom = mb -->
+        <div class="service mb-3 pt-4">
+            <h1>Featured Category</h1>
+        </div>                
+          <div class="row text-center">
+            <!-- first part -->
+              <div class="col-lg-3">
+                  <a href="#"><i class="p-2 text-primary fa-2x  fa-solid fa-desktop"></i></a>
+                  <h5>Desktop</h5>
+                  <p class="text-muted">Build your dream PC with our high-quality components for peak performance.</p>
+              </div>
+              <div class="col-lg-3">
+                  <a href="#"><i class="p-2 text-primary fa-2x fa-solid fa-laptop"></i></a>
+                  <h5>Laptop</h5>
+                  <p class="text-muted">Experience power and portability with our diverse laptop collection.</p>
+              </div>
+              <div class="col-lg-3">
+                <a href="#"><i class="p-2 text-primary fa-2x fa-solid fa-tv"></i></a>
+                <h5>TV</h5>
+                <p class="text-muted">Elevate your viewing experience with our top-of-the-line TVs for immersive entertainment.</p>
+            </div>
+              <div class="col-lg-3">
+                  <a href="#"><i class="p-2 text-primary fa-2x fa-solid fa-mobile"></i></a>
+                  <h5>Smart Phone</h5>
+                  <p class="text-muted">Stay connected with the latest smartphones at unbeatable prices for seamless communication.</p>
+              </div>
+
+            <!-- second part -->
+              <div class="col-lg-3">
+                <a href="#"><i class="p-2 text-primary fa-2x  fa-sharp fa-solid fa-microchip"></i></a>
+                <h5>CPU</h5>
+                <p class="text-muted">Boost your system's performance with our reliable CPUs for faster computing.</p>
+            </div>
+            <div class="col-lg-3">
+                <a href="#"><i class="p-2 text-primary fa-2x fa-solid fa-headphones"></i></a>
+                <h5>Headphone</h5>
+                <p class="text-muted">Immerse yourself in gaming and entertainment with our top-notch headsets for an audio experience like no other.</p>
+            </div>
+            <div class="col-lg-3">
+              <a href="#"><i class="p-2 text-primary fa-2x fa-solid fa-file-shield"></i></a>
+              <h5>Anti Virus</h5>
+              <p class="text-muted">Protect your device from cyber threats with our trusted antivirus software for peace of mind.</p>
+          </div>
+            <div class="col-lg-3">
+                <a href="#"><i class="p-2 text-primary fa-2x fa-solid fa-gamepad"></i></a>
+                <h5>Gaming Console</h5>
+                <p class="text-muted">Enter the world of gaming with our cutting-edge gaming consoles for an unparalleled gaming experience.</p>
+            </div>
+          </div>
+      </div>
+            <!-- categories -->
+            <div class="services bg-light text-center">
+              <!-- margin-bottom = mb -->
+              <div class="service mb-3 pt-4">
+                  <h1>Featured Products</h1>
+              </div>                
+                <div class="row text-center">
+                        <!-- first part -->
+                        <div class="col-lg-4">
+                          <!-- <a href="#"><img src="./all images/laptop 1.png" alt="Razer Blade" ></a> -->
+                          <a href="#"><img src="{% static 'all images/laptop 1.png'%}" alt="Razer Blade" ></a>
+                          <h5>Razer Blade</h5>
+                          <p class="text-muted">Razer Blade 15 Advanced Model Core i7 11th Gen RTX 3070 8GB Graphics 15.6" QHD Gaming Laptop.</p>
+                      </div>
+                      <div class="col-lg-4">
+                          <!-- <a href="#"><img src="./all images/laptop 2.png" alt="Razer Book"></a> -->
+                          <a href="#"><img src="{% static 'all images/laptop 2.png'%}" alt="Razer Book" ></a>
+                          <h5>Razer Book</h5>
+                          <p class="text-muted">Razer Book 13 Core i7 11th Gen 512GB SSD 13.4" FHD Touch Laptop.</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <!-- <a href="#"><img src="./all images/laptop 3.png" alt="Razer Blade"></a> -->
+                        <a href="#"><img src="{% static 'all images/laptop 3.png'%}" alt="Razer Blade" ></a>
+                        <h5>Razer Blade</h5>
+                        <p class="text-muted">Razer Blade 15 Advanced Model Core i7 11th Gen 32GB RAM RTX3080 8GB Graphics 15.6" FHD 360Hz Gaming Laptop.</p>
+                      </div>
+                      <div class="col-lg-4">
+                        <!-- <a href="#"><img src="./all images/desktop 1.png" alt="MSI Optix"></a> -->
+                        <a href="#"><img src="{% static 'all images/desktop 1.png'%}" alt="MSI Optix" ></a>
+                          <h5>MSI Optix</h5>
+                          <p class="text-muted">MSI Optix G241V E2 24" FHD FreeSync IPS Esports Gaming Monitor.</p>
+                      </div>   
+                      <div class="col-lg-4">
+                        <!-- <a href="#"><img src="./all images/desktop 2.webp" alt="MSI G2412"></a> -->
+                        <a href="#"><img src="{% static 'all images/desktop 2.webp'%}" alt="MSI G2412" ></a>
+                          <h5>MSI G2412</h5>
+                          <p class="text-muted">MSI G2412 23.8" 170Hz FHD IPS 1ms FreeSync Premium Gaming Monitor.</p>
+                      </div>    
+                      <div class="col-lg-4">
+                        <!-- <a href="#"><img src="./all images/desktop 3.png" alt="MSI Optix"></a> -->
+                        <a href="#"><img src="{% static 'all images/desktop 3.png'%}" alt="MSI Optix" ></a>
+                          <h5>MSI Optix</h5>
+                          <p class="text-muted">MSI Optix G24C4 23.6 Inch FHD Curved LED Gaming Monitor With 144Hz Refresh Rate.</p>
+                      </div>                
+                  </div>
+                </div>
+      
+    </main>
+
+    {% include "home/footer.html" %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

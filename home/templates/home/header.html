@@ -1,0 +1,72 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>    
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap-5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <header class="bg-dark p-2">
+        <div class="row">
+          <div class="text-center">
+            <nav class="nav justify-content-center py-2">
+              <!-- logo -->
+              <li class="nav-item px-3">
+                <a href="/homepage">
+                  <img src="{%static 'all images/TechHive_orange.png'%}" alt="Image" height="50" width="130">
+                </a>
+              </li>
+              <form action="/search" class="d-flex">
+                <!-- <li class="nav-item px-3 pt-2"> -->
+                  <!-- add 3px padding on both sides -->
+                  <!-- <label for="search"></label> -->
+                  <input class="form-control-lg me-2" type="search" placeholder="Search" aria-label="Search" name="query" id="search" placeholder="search">
+                  <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+                  <button type="submit" class="btn btn-outline-success">Search</button>
+                <!-- </li> -->
+              </form>
+              <!-- hot deal login out contact us -->
+              <li class="nav-item"><a class="text-warning nav-link px-3" href="/hotdeals"><h5>Hot Deals!</h5></a></li>
+              <!-- add 3px padding on both sides -->
+              {% if user.is_authenticated %}
+                  <li class="nav-item"><a class="text-white nav-link px-3" href="/view_logout"><h5>Logout</h5></a></li>
+                  <li class="nav-item"><a class="text-white nav-link px-3" href="/password_change"><h5> Password-Change </h5></a></li>
+                  {% else %}
+                  <li class="nav-item"><a class="text-white nav-link px-3" href="/login"><h5>Login</h5></a></li>
+              {% endif %}
+                  <li class="nav-item"><a class="text-white nav-link px-3" href="/contact"><h5>Contact Us</h5></a></li>
+              {% if user.is_authenticated %}
+                  <a class="text-white nav-link px-3" href="#"><h5>User : {{ user }}</h5></a>
+              {% else %}
+                  <a class="text-white nav-link px-3" href="#"><h5>Account : View-only</h5></a>
+              {% endif %}
+                  
+            </nav>
+          </div>
+        </div>
+        <div class="row">
+          <div class="text-center">
+            <ul class="nav justify-content-center py-2 ">
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/desktop"><h6>Desktop</h6></a></li>
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/laptop"><h6>Laptop</h6></a></li>
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/component"><h6>Component</h6></a></li>
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/monitor"><h6>Monitor</h6></a></li>
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/accessories"><h6>Accessories</h6></a></li>
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/gadget"><h6>Gadget</h6></a></li>
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/gaming"><h6>Gaming</h6></a> </li>  
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

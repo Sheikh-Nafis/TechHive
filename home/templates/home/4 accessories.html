@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories</title>
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bootstrap-5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+  {% include "home/header.html" %}
+  <main>
+    <div class="services bg-light text-center">
+      <div class="service mb-3 pt-4">
+      <h1>Accessories Deals</h1>
+      </div>
+      <div class="row text-center">
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/a1.png'%}" alt="Accessories" width="300" height="300"></a>
+          <h5>Bose Lifestyle 600 Home Entertainment Speaker System</h5>
+          <p class="text-muted">Direct/reflecting satellite speakers with angled transducers
+            Compact, 6" centre channel speaker
+            5.1-Channel Configuration
+            Bluetooth & Wi-Fi Music Streaming</p>
+            <hr>
+            <h4 class="text-danger">282,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/a2.png'%}" alt="Accessories" width="300" height="300"></a>
+          <h5>AKG C414 XLS Large-diaphragm Multipattern Microphone</h5>
+          <p class="text-muted">For Voice, Instruments, Drums & Cabs
+            Nine Selectable Polar Patterns
+            1" Capsule Maintains C414 B-ULS Sound
+            Completely Immune to EMI and ESI</p>
+            <hr>
+            <h4 class="text-danger">133,000 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/a3.png'%}" alt="Accessories" width="300" height="300"></a>
+          <h5>Razer BlackShark V2 Pro Rainbow Six Siege Special Edition Wireless</h5>
+          <p class="text-muted">Razer HyperSpeed Wireless
+            Razer TriForce Titanium 50mm Drivers
+            Razer HyperClear Supercardioid Mic
+            Compatible: PC, Mac, PS4, Nintendo Switch</p>
+            <hr>
+            <h4 class="text-danger">21,700 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/a4.png'%}" alt="Accessories" width="300" height="300"></a>
+          <h5>Razer Viper Ultimate RGB Gaming Mouse with Charging Dock</h5>
+          <p class="text-muted">Razer Hyperspeed Wireless technology
+            Razer Focus+ Optical Sensor
+            Razer Optical Mouse Switches
+            74g lightweight design</p>
+            <hr>
+            <h4 class="text-danger">15,800 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/a5.png'%}" alt="Accessories" width="300" height="300"></a>
+          <h5>Logitech G PRO Tenkeyless RGB Mechanical Gaming Keyboard</h5>
+          <p class="text-muted">Pro-inspired tenkeyless design
+            GX Blue Clicky mechanical switches
+            1.8 m detachable cable
+            12 programmable F-keys, 1 ms report rate</p>
+            <hr>
+            <h4 class="text-danger">10,900 Taka</h4>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="#"><img src="{% static 'all images/a6.png'%}" alt="Accessories" width="300" height="300"></a>
+          <h5>Logitech C922 Pro Full HD Webcam</h5>
+          <p class="text-muted">FOR STREAMING AND RECORDING
+            FULL HD 1080P AT 30FPS / 720P
+            60FPS STREAMING
+            AUTOMATIC LOW LIGHT</p>
+            <hr>
+            <h4 class="text-danger">11,800 Taka</h4>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  {% include "home/footer.html" %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop</title>
+    <link rel="stylesheet" href="{%static 'css/navbar.css'%}">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bootstrap-5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+      {% include "home/header.html" %}
+      <main>
+        <div class="services bg-light text-center">
+          <div class="service mb-3 pt-4">
+          <h1>Desktop Deals</h1>
+          </div>
+          <div class="row text-center">
+            <div class="col-lg-4">
+              <a href="#"><img src="{% static 'all images/pc1.png'%}" alt="Desktop" width="300" height="300"></a>
+              <h5>AMD Ryzen 5 5600G Budget Desktop PC</h5>
+              <p class="text-muted">AMD Ryzen 5 5600G Processor with Radeon Graphics (Chinese Edition)
+                MSI A320M-A Pro Max AMD Motherboard
+                Corsair 8GB 3200MHz DDR4 RAM + HP EX900 250GB SSD
+                Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</p>
+                <hr>
+                <h4 class="text-danger">33,999 Taka</h4>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="#"><img src="{% static 'all images/pc2.png'%}" alt="Desktop" width="300" height="300"></a>
+              <h5>Antec DF700 FLUX White ATX Case & Symphony 360 ARGB CPU Cooler Combo</h5>
+              <p class="text-muted">Motherboard Support: ATX, Micro-ATX, Mini-ITX
+                Pre-installed fans: 3 In Front, 1 on PSU shroud, 1 in Rear
+                3x PWM ARGB LED Fan
+                Speed: 800-1600rpm ± 100</p>
+                <hr>
+                <h4 class="text-danger">18,999 Taka</h4>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="#"><img src="{% static 'all images/pc3.png'%}" alt="Desktop" width="300" height="300"></a>
+              <h5>AMD Ryzen 5 5600G Desktop PC</h5>
+              <p class="text-muted">AMD Ryzen 5 5600G Processor (Chinese Edition)
+                MSI A320M-A Pro Max AMD Motherboard
+                Kingston FURY Beast 8GB 3200MHz DDR4 Desktop RAM
+                HP EX900 M.2 250GB PCIe NVMe Internal SSD</p>
+                <hr>
+                <h4 class="text-danger">25,799 Taka</h4>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="#"><img src="{% static 'all images/pc4.png'%}" alt="Desktop" width="300" height="300"></a>
+              <h5>AMD Ryzen 5 5600G Basic Video Editing Desktop PC</h5>
+              <p class="text-muted">AMD Ryzen 5 5600G Processor with Radeon Graphics (Chinese Edition)
+                ASRock B450M-HDV R4.0 AMD Motherboard
+                Corsair 16GB 3200MHz DDR4 RAM + HP EX900 250GB SSD
+                ViewSonic VA2209-H 22" IPS Full HD Monitor</p>
+                <hr>
+                <h4 class="text-danger">53,999 Taka</h4>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="#"><img src="{% static 'all images/pc5.png'%}" alt="Desktop" width="300" height="300"></a>
+              <h5>AMD Ryzen 7 5700X Processor with Motherboard, RAM and PSU</h5>
+              <p class="text-muted">AMD Ryzen 7 5700X Processor
+                Gigabyte B550M DS3H AM4 Micro ATX Motherboard
+                Kingston FURY Beast 16GB 3200MHz DDR4 RAM
+                1STPLAYER PS-600AX Bronze Full Modular Power Supply</p>
+                <hr>
+                <h4 class="text-danger">43,799 Taka</h4>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="#"><img src="{% static 'all images/pc6.png'%}" alt="Desktop" width="300" height="300"></a>
+              <h5>Intel Core i5-12400 Processor with Motherboard, RAM and PSU</h5>
+              <p class="text-muted">Intel 12th Gen Core i5-12400 Alder Lake Processor
+                GIGABYTE H610M S2H DDR4 12th Gen Motherboard
+                Kingston FURY Beast 8GB 3200MHz DDR4 RAM
+                1STPLAYER DK 5.0 PS-500AX 500W Power Supply</p>
+                <hr>
+                <h4 class="text-danger">36,499 Taka</h4>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      {% include "home/footer.html" %}
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

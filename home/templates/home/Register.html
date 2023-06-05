@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap-5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+  {% include "home/header.html" %}
+  
+    <main>
+        <div class="container text-center py-2">
+          <h1 class="text-warning">TechHive🐝</h1>
+          <hr>
+      </div>
+        
+      {% for msg in messages %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong></strong>{{ msg }}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+       
+      {% endfor %}
+      
+  <form action="#" method="post">
+    {% csrf_token %}
+
+    <div class="container-fluid text-center bg-light">
+      <!-- after action we need to use  method="post" -->
+    <h2 class="p-2">Registration Page</h2>
+    <form action="#" method="post">
+            
+        <!-- connecting label and input by using id and name -->
+        <!-- using required so that user can't keep the input blank -->
+            <div class="py-2">
+              <!-- username -->     
+              <p>Username:</p>
+              <label for="username"></label>
+              <input type="text" id="username" name="username" required>          
+            </div>
+
+            <div class="py-2">
+              <!-- email --> 
+              <p>Email:</p>
+              <label for="email"></label>
+              <input type="email" id="email" name="email" required>          
+            </div>
+            <div class="py-2">
+              <!-- password -->
+                  <p>Password:</p>
+                  <label for="password"></label>
+                  <input type="password" name="password" id="password" required>
+
+            </div>
+            <div class="py-2">
+              <!-- Confirm Password -->
+                  <p>Confirm Password:</p>
+                  <label for="Confrom Password"></label>
+                  <input type="Password" name="Confirm Password" id="Confirm Password" required>
+
+            </div>
+          <div class="py-4">
+            <button type="submit" class="btn btn-primary">Continue</button>
+              
+          </div>
+        
+   
+    </div>
+    
+  </form>
+    </main>
+
+    {% include "home/footer.html" %}
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</div>
+</body>
+</html>

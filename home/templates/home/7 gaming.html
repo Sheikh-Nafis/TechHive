@@ -1,0 +1,164 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming</title>
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- bootstrap-5 -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{background-color: rgb(27 40 56);}
+    </style>
+</head>
+<body>
+  <header class="bg-dark p-2">
+    <div class="row">
+      <div class="text-center">
+        <nav class="nav justify-content-center py-2">
+          <!-- logo -->
+          <li class="nav-item px-3">
+            <a href="/homepage">
+              <img src="{%static 'all images/TechHive_orange.png'%}" alt="Image" height="50" width="130">
+            </a>
+          </li>
+          <form action="/search" class="d-flex">
+            <!-- <li class="nav-item px-3 pt-2"> -->
+              <!-- add 3px padding on both sides -->
+              <!-- <label for="search"></label> -->
+              <input class="form-control-lg me-2" type="search" placeholder="Search" aria-label="Search" name="query" id="search" placeholder="search">
+              <!-- <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+              <button type="submit" class="btn btn-outline-success">Search</button>
+            <!-- </li> -->
+          </form>
+          <!-- hot deal login out contact us -->
+          <li class="nav-item"><a class="text-warning nav-link px-3" href="/hotdeals"><h5>Hot Deals!</h5></a></li>
+          <!-- add 3px padding on both sides -->
+          {% if user.is_authenticated %}
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/view_logout"><h5>Logout</h5></a></li>
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/password_change"><h5> Password-Change </h5></a></li>
+              {% else %}
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/login"><h5>Login</h5></a></li>
+          {% endif %}
+              <li class="nav-item"><a class="text-white nav-link px-3" href="/contact"><h5>Contact Us</h5></a></li>
+          {% if user.is_authenticated %}
+              <a class="text-white nav-link px-3" href="#"><h5>User : {{ user }}</h5></a>
+          {% else %}
+              <a class="text-white nav-link px-3" href="#"><h5>Account : View-only</h5></a>
+          {% endif %}
+              
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="text-center">
+        <ul class="nav justify-content-center py-2 ">
+          <li class="nav-item"><a class="text-white nav-link px-3" href="/desktop"><h6>Desktop</h6></a></li>
+          <li class="nav-item"><a class="text-white nav-link px-3" href="/laptop"><h6>Laptop</h6></a></li>
+          <li class="nav-item"><a class="text-white nav-link px-3" href="/component"><h6>Component</h6></a></li>
+          <li class="nav-item"><a class="text-white nav-link px-3" href="/monitor"><h6>Monitor</h6></a></li>
+          <li class="nav-item"><a class="text-white nav-link px-3" href="/accessories"><h6>Accessories</h6></a></li>
+          <li class="nav-item"><a class="text-white nav-link px-3" href="/gadget"><h6>Gadget</h6></a></li>
+          <li class="nav-item"><a class="text-white nav-link px-3" href="/gaming"><h6>Gaming</h6></a> </li>  
+        </ul>
+      </div>
+    </div>
+  </header>
+
+      <main>
+        <div class="services text-center">
+          <!-- margin-bottom = mb -->
+          <div class="service mb-3 pt-4">
+              <h1 class="text-white pb-3">Featured Steam Games</h1>
+          </div>                
+            <div class="row text-center">
+                    <!-- first part -->
+                    <div class="col-lg-3">
+                      <!-- <a href="#"><img src="./all images/laptop 1.png" alt="Razer Blade" ></a> -->
+                      <a href="#"><img src="{% static 'all images/cs.png'%}" alt="CSGO" width="280" height="400"></a>
+                      <h5 class="text-white pt-4">Counter Strike Global Offensive</h5>
+                      <p class="text-muted">Buy Counter Strike Global Offensive - Prime Status. $14.99.</p>
+                  </div>
+                  <div class="col-lg-3">
+                      <!-- <a href="#"><img src="./all images/laptop 2.png" alt="Razer Book"></a> -->
+                      <a href="#"><img src="{% static 'all images/ah.png'%}" alt="Atomic Heart" width="280" height="400" ></a>
+                      <h5 class="text-white pt-4">Atomic Heart</h5>
+                      <p class="text-muted">Buy Atomic Heartege - Gold Edition. $89.99.</p>
+                  </div>
+                  <div class="col-lg-3">
+                    <!-- <a href="#"><img src="./all images/laptop 3.png" alt="Razer Blade"></a> -->
+                    <a href="#"><img src="{% static 'all images/halo.png'%}" alt="MCC" width="280" height="400"></a>
+                    <h5 class="text-white pt-4">Halo : Master Chief Collection</h5>
+                    <p class="text-muted">Buy Halo : Master Chief Collection. $12.99.</p>
+                  </div>
+                  <div class="col-lg-3">
+                    <!-- <a href="#"><img src="./all images/desktop 1.png" alt="MSI Optix"></a> -->
+                    <a href="#"><img src="{% static 'all images/hl.png'%}" alt="Hogwarts Legacy" width="280" height="400"></a>
+                      <h5 class="text-white pt-4">Hogwarts Legacy</h5>
+                      <p class="text-muted">Buy Hogwarts Legacy: Digital Deluxe Edition. $69.99.</p>
+                  </div>   
+                  <div class="col-lg-3">
+                    <!-- <a href="#"><img src="./all images/desktop 2.webp" alt="MSI G2412"></a> -->
+                    <a href="#"><img src="{% static 'all images/re4.png'%}" alt="Resident Evil 4" width="280" height="400"></a>
+                      <h5 class="text-white pt-4">Resident Evil 4</h5>
+                      <p class="text-muted">Buy Resident Evil 4 Deluxe Edition. $69.99.</p>
+                  </div>    
+                  <div class="col-lg-3">
+                    <!-- <a href="#"><img src="./all images/desktop 3.png" alt="MSI Optix"></a> -->
+                    <a href="#"><img src="{% static 'all images/sot.png'%}" alt="Sea of Thieves" width="280" height="400"></a>
+                      <h5 class="text-white pt-4">Sea of Thieves</h5>
+                      <p class="text-muted">Buy Sea of Thieves Deluxe Edition· $49.99.</p>
+                  </div> 
+                  <div class="col-lg-3">
+                    <!-- <a href="#"><img src="./all images/desktop 3.png" alt="MSI Optix"></a> -->
+                    <a href="#"><img src="{% static 'all images/sv.png'%}" alt="Stardew Valley" width="280" height="400"></a>
+                      <h5 class="text-white pt-4">Stardew Valley</h5>
+                      <p class="text-muted">Buy Stardew Valley· $14.99.</p>
+                  </div>  
+                  <div class="col-lg-3">
+                    <!-- <a href="#"><img src="./all images/desktop 3.png" alt="MSI Optix"></a> -->
+                    <a href="#"><img src="{% static 'all images/wwe.png'%}" alt="WWE 2k23" width="280" height="400"></a>
+                      <h5 class="text-white pt-4">WWE 2k23</h5>
+                      <p class="text-muted">Buy WWE 2k23 Deluxe Edition· $99.99.</p>
+                  </div>                 
+              </div>
+            </div>
+      </main>
+
+      <footer>
+        <div class="services bg-dark text-center">
+          <!-- margin-bottom = mb -->
+          <div class="text-white service mb-3 py-4">
+              <h2>Stay Connected</h2>
+              <hr>
+          </div>                
+      <div class="row text-center">
+          <div class="col-lg-3">
+              <i class="p-2 text-primary fa-2x  fab fa-facebook"></i>
+              <h5>Facebook</h5>
+              <p class="text-muted">Join our community and stay up-to-date on the latest deals, news, and events.</p>
+          </div>
+          <div class="col-lg-3">
+              <i class="p-2 text-success fa-2x fab fa-whatsapp"></i>
+              <h5>Whatsapp</h5>
+              <p class="text-muted">Get instant support and answers to your questions directly from our customer service team.</p>
+          </div>
+          <div class="col-lg-3">
+              <i class="p-2 text-white fa-2x fab fa-discord"></i>
+              <h5>Discord</h5>
+              <p class="text-muted">Connect with fellow tech enthusiasts and get exclusive access to TechHive events and giveaways.</p>
+          </div>
+          <div class="col-lg-3">
+              <i class="p-2 text-danger fa-2x fab fa-instagram"></i>
+              <h5>Instagram</h5>
+              <p class="text-muted">Follow us for a behind-the-scenes look at our products and updates on the latest tech trends.</p>
+          </div>
+      </div>
+  </div>
+      </footer>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
