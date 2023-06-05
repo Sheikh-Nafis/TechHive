@@ -26,8 +26,10 @@
               <a href="#"><img src="{{ d.img.url }}" alt="Desktop" width="300" height="300"></a>
               <h5>{{ d.title }}</h5>
               <p class="text-muted">{{ d.description }}</p>
+              <p class="text-muted">Remaining - {{ d.stock }}</p>
                 <hr>
                 <h4 class="text-danger">{{ d.price }} Taka</h4>
+                <div class="pb-2"><button type="button" class="btn btn-outline-primary">Add to cart</button></div>
             </div>
             {% endfor%}
 

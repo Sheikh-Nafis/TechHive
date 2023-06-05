@@ -5,6 +5,7 @@ class Game(models.Model):
     g_img = models.ImageField(upload_to='./games/')
     g_title = models.CharField(max_length=100)
     g_description = models.CharField(max_length=500)
+    stock = models.IntegerField(default=10)
 
 class Desktop(models.Model):
     id = models.AutoField(primary_key=True)
@@ -12,6 +13,7 @@ class Desktop(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Laptop(models.Model):
     id = models.AutoField(primary_key=True)
@@ -19,6 +21,7 @@ class Laptop(models.Model):
     l_title = models.CharField(max_length=100)
     l_description = models.CharField(max_length=500)
     l_price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Monitor(models.Model):
     id = models.AutoField(primary_key=True)
@@ -26,6 +29,7 @@ class Monitor(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Component(models.Model):
     id = models.AutoField(primary_key=True)
@@ -33,6 +37,7 @@ class Component(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Accessorie(models.Model):
     id = models.AutoField(primary_key=True)
@@ -40,6 +45,7 @@ class Accessorie(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Gadget(models.Model):
     id = models.AutoField(primary_key=True)
@@ -47,6 +53,7 @@ class Gadget(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Tv(models.Model):
     id = models.AutoField(primary_key=True)
@@ -54,6 +61,7 @@ class Tv(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Phone(models.Model):
     id = models.AutoField(primary_key=True)
@@ -61,6 +69,7 @@ class Phone(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 # python manage.py shell
 # from home.models import Game
