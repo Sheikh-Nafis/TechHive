@@ -25,7 +25,9 @@ def slider(request):
     return render(request, 'home/slider.html')
 
 def monitor(request):
-    return render(request, 'home/3 monitor.html')
+    monitor = Monitor.objects.all()
+    context = {'monitor':monitor}
+    return render(request, 'home/3 monitor.html',context)
 
 def accessories(request):
     return render(request, 'home/4 accessories.html')
@@ -34,7 +36,9 @@ def gadget(request):
     return render(request, 'home/5 gadget.html')
 
 def component(request):
-    return render(request, 'home/6 component.html')
+    component = Component.objects.all()
+    context = {'component':component}
+    return render(request, 'home/6 component.html',context)
 
 def gaming(request):
     game = Game.objects.all()

@@ -20,71 +20,15 @@
       <h1>Monitor Deals</h1>
       </div>
       <div class="row text-center">
+        {% for m in monitor %}
         <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/m1.png'%}" alt="Monitor" width="300" height="300"></a>
-          <h5>LG 32EP950-B 32 Inch UltraFine OLED Pro 4K Professional Monitor</h5>
-          <p class="text-muted">Resolution: 4K UltraFine OLED Pro (3840 x 2160)
-            Display: OLED, 60Hz, 1ms GTG
-            Ports: 1x HDMI, 2x DP, 3x USB, Type-C
-            Features: Tilt Adjustment, High Dynamic Range Oled</p>
+          <a href="#"><img src="{{ m.img.url }}" alt="Monitor" width="300" height="300"></a>
+          <h5>{{ m.title }}</h5>
+          <p class="text-muted">{{ m.description }}</p>
             <hr>
-            <h4 class="text-danger">445,000 Taka</h4>
+            <h4 class="text-danger">{{ m.price }} Taka</h4>
         </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/m2.png'%}" alt="Monitor" width="300" height="300"></a>
-          <h5>ASUS ProArt PA32UCR-K 32" Professional 4K Monitor</h5>
-          <p class="text-muted">Resolution: 4K UHD HDR (3840 x 2160)
-            Display: IPS, 60Hz, 5ms
-            Ports: HDMI, DP, USB, Type-C
-            Features: Flicker Free, Low Blue Light</p>
-            <hr>
-            <h4 class="text-danger">233,000 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/m3.png'%}" alt="Monitor" width="300" height="300"></a>
-          <h5>BenQ SW321C 32" 4K UHD IPS Photographer Monitor</h5>
-          <p class="text-muted">Resolution: UHD (3840 x 2160) 4K
-            Display: IPS, 60Hz, 5 ms GtG
-            Ports: 2x HDMI, 1x DP, 3x USB, Type-C
-            Features: free Sync</p>
-            <hr>
-            <h4 class="text-danger">227,000 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/m4.png'%}" alt="Monitor" width="300" height="300"></a>
-          <h5>ViewSonic XG320U 32" 150Hz UHD Gaming Monitor</h5>
-          <p class="text-muted">Resolution: UHD (3840 x 2160)
-            Display: IPS, 150Hz, 1ms
-            Ports: HDMI, DisplayPort, USB 3.2, Micro USB, 3.5mm
-            Features: 5Watts x2 Speaker, Adaptive Sync</p>
-            <hr>
-            <h4 class="text-danger">154,000 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/m5.png'%}" alt="Monitor" width="300" height="300"></a>
-          <h5>LG UltraGear 34GP950G-B 34" QHD Nano IPS 1ms 144Hz Curved</h5>
-          <p class="text-muted">Resolution: QHD (3840 x 1600)
-            Display: Nano IPS, 144Hz (O.C 180Hz), 1ms
-            Ports: 1x HDMI, 1x DP, 3x USB
-            Features: G-Sync, Free Synce, HDR 600</p>
-            <hr>
-            <h4 class="text-danger">166,000 Taka</h4>
-        </div>
-
-        <div class="col-lg-4">
-          <a href="#"><img src="{% static 'all images/m6.png'%}" alt="Monitor" width="300" height="300"></a>
-          <h5>Asus ROG Strix XG49VQ 49 Inch 4K Gaming Monitor</h5>
-          <p class="text-muted">Resolution: ultra-wide (3840x1080) 4K
-            Display: VA, 144Hz, 4ms GTG
-            Ports: 2x HDMI, 1x DP, 2x USB,3.5mm Mini-Jack
-            Features: Free Sync, Flicker Free, Low Blue Light</p>
-            <hr>
-            <h4 class="text-danger">145,000 Taka</h4>
-        </div>
+        {% endfor%}
       </div>
     </div>
   </main>

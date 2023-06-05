@@ -18,7 +18,13 @@ class Laptop(models.Model):
     l_price = models.IntegerField()
 
 class Monitor(models.Model):
-    img = models.ImageField(upload_to='./lp/')
+    img = models.ImageField(upload_to='./m/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    price = models.IntegerField()
+
+class Component(models.Model):
+    img = models.ImageField(upload_to='./c/')
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
     price = models.IntegerField()
