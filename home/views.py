@@ -17,7 +17,9 @@ def desktop(request):
     return render(request, 'home/1 desktop.html',context)
 
 def laptop(request):
-    return render(request, 'home/2 laptop.html')
+    laptop = Laptop.objects.all()
+    context = {'laptop':laptop}
+    return render(request, 'home/2 laptop.html',context)
 
 def slider(request):
     return render(request, 'home/slider.html')

@@ -20,7 +20,16 @@
       <h1>Laptop Deals</h1>
       </div>
       <div class="row text-center">
+        {% for l in laptop %}
         <div class="col-lg-4">
+          <a href="#"><img src="{{ l.l_img.url }}" alt="Laptop" width="300" height="300"></a>
+          <h5>{{ l.l_title }}</h5>
+          <p class="text-muted">{{ l.l_description }}</p>
+            <hr>
+            <h4 class="text-danger">{{ l.l_price }} Taka</h4>
+        </div>
+        {% endfor%}
+        {% comment %} <div class="col-lg-4">
           <a href="#"><img src="{% static 'all images/l1.png'%}" alt="Laptop" width="300" height="300"></a>
           <h5>MSI Titan GT77HX 13VI Core i9 13th Gen 64GB RAM 4TB SSD RTX 4090 16GB Graphics 17.3" 4K UHD 144Hz Gaming Laptop</h5>
           <p class="text-muted">Processor: Intel Core i9-13980HX (36M Cache, 2.2 GHz up to 5.60 GHz)
@@ -84,7 +93,7 @@
             Features: Backlit Keyboard</p>
             <hr>
             <h4 class="text-danger">242,900 Taka</h4>
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
   </main>
