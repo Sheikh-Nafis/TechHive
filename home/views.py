@@ -33,7 +33,9 @@ def component(request):
     return render(request, 'home/6 component.html')
 
 def gaming(request):
-    return render(request, 'home/7 gaming.html')
+    game = Game.objects.all()
+    context = {'game':game}
+    return render(request, 'home/7 gaming.html', context)
 
 def contact(request):
     return render(request,'home/contact us.html')
