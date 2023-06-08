@@ -7,6 +7,20 @@ class Game(models.Model):
     g_description = models.CharField(max_length=500)
     stock = models.IntegerField(default=10)
 
+class Game2(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./games/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    stock = models.IntegerField(default=10)
+
+class Game3(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./games/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    stock = models.IntegerField(default=10)
+
 class Desktop(models.Model):
     id = models.AutoField(primary_key=True)
     img = models.ImageField(upload_to='./pc/')
@@ -64,6 +78,14 @@ class Tv(models.Model):
     stock = models.IntegerField(default=10)
 
 class Phone(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./p/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    price = models.IntegerField()
+    stock = models.IntegerField(default=10)
+
+class Console(models.Model):
     id = models.AutoField(primary_key=True)
     img = models.ImageField(upload_to='./p/')
     title = models.CharField(max_length=100)

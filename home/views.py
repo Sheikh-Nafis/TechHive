@@ -16,6 +16,11 @@ def desktop(request):
     context = {'desktop':desktop}
     return render(request, 'home/1 desktop.html',context)
 
+def console(request):
+    console = Console.objects.all()
+    context = {'console':console}
+    return render(request, 'home/console.html',context)
+
 def laptop(request):
     laptop = Laptop.objects.all()
     context = {'laptop':laptop}
@@ -48,6 +53,16 @@ def gaming(request):
     game = Game.objects.all()
     context = {'game':game}
     return render(request, 'home/7 gaming.html', context)
+
+def gaming2(request):
+    game2 = Game2.objects.all()
+    context = {'game2':game2}
+    return render(request, 'home/7 gaming_2.html',context)
+
+def gaming3(request):
+    game3 = Game3.objects.all()
+    context = {'game3':game3}
+    return render(request, 'home/7 gaming_3.html',context)
 
 def phone(request):
     phone = Phone.objects.all()
