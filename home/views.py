@@ -16,6 +16,11 @@ def desktop(request):
     context = {'desktop':desktop}
     return render(request, 'home/1 desktop.html',context)
 
+def desktop1(request):
+    desktop1 = Desktop1.objects.all()
+    context = {'desktop1':desktop1}
+    return render(request, 'home/1 desktop1.html',context)
+
 def console(request):
     console = Console.objects.all()
     context = {'console':console}
@@ -26,6 +31,11 @@ def laptop(request):
     context = {'laptop':laptop}
     return render(request, 'home/2 laptop.html',context)
 
+def laptop2(request):
+    laptop2 = Laptop2.objects.all()
+    context = {'laptop2':laptop2}
+    return render(request, 'home/2 laptop2.html',context)
+
 def slider(request):
     return render(request, 'home/slider.html')
 
@@ -33,6 +43,11 @@ def monitor(request):
     monitor = Monitor.objects.all()
     context = {'monitor':monitor}
     return render(request, 'home/3 monitor.html',context)
+
+def monitor2(request):
+    monitor2 = Monitor2.objects.all()
+    context = {'monitor2':monitor2}
+    return render(request, 'home/3 monitor2.html',context)
 
 def accessories(request):
     accessorie = Accessorie.objects.all()
@@ -43,6 +58,11 @@ def gadget(request):
     gadget = Gadget.objects.all()
     context = {'gadget':gadget}
     return render(request, 'home/5 gadget.html',context)
+
+def gadget2(request):
+    gadget2 = Gadget2.objects.all()
+    context = {'gadget2':gadget2}
+    return render(request, 'home/5 gadget2.html',context)
 
 def component(request):
     component = Component.objects.all()

@@ -29,6 +29,14 @@ class Desktop(models.Model):
     price = models.IntegerField()
     stock = models.IntegerField(default=10)
 
+class Desktop1(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./pc/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    price = models.IntegerField()
+    stock = models.IntegerField(default=10)
+
 class Laptop(models.Model):
     id = models.AutoField(primary_key=True)
     l_img = models.ImageField(upload_to='./lp/')
@@ -37,7 +45,23 @@ class Laptop(models.Model):
     l_price = models.IntegerField()
     stock = models.IntegerField(default=10)
 
+class Laptop2(models.Model):
+    id = models.AutoField(primary_key=True)
+    l_img = models.ImageField(upload_to='./lp/')
+    l_title = models.CharField(max_length=100)
+    l_description = models.CharField(max_length=500)
+    l_price = models.IntegerField()
+    stock = models.IntegerField(default=10)
+
 class Monitor(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./m/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    price = models.IntegerField()
+    stock = models.IntegerField(default=10)
+
+class Monitor2(models.Model):
     id = models.AutoField(primary_key=True)
     img = models.ImageField(upload_to='./m/')
     title = models.CharField(max_length=100)
@@ -61,7 +85,16 @@ class Accessorie(models.Model):
     price = models.IntegerField()
     stock = models.IntegerField(default=10)
 
+
 class Gadget(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./g/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    price = models.IntegerField()
+    stock = models.IntegerField(default=10)
+
+class Gadget2(models.Model):
     id = models.AutoField(primary_key=True)
     img = models.ImageField(upload_to='./g/')
     title = models.CharField(max_length=100)
