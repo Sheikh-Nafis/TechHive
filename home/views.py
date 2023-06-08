@@ -130,13 +130,13 @@ def login(request):
             auth_login(request,user)
             return redirect('homepage')
         else:
-            
-            print("User not found")
-            error = 'Email and password not matched!'
-            context = {
-                'error' : error
-            }
-            return render(request, 'home/log in.html', context)
+            messages.error(request, "Username and password did not matched!")    
+            # print("User not found")
+            # error = 'Email and password not matched!'
+            # context = {
+            #     'error' : error
+            # }
+            # return render(request, 'home/log in.html', context)
         
     return render(request,'home/log in.html')
 
