@@ -77,6 +77,14 @@ class Component(models.Model):
     price = models.IntegerField()
     stock = models.IntegerField(default=10)
 
+class Component2(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./c/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    price = models.IntegerField()
+    stock = models.IntegerField(default=10)
+
 class Accessorie(models.Model):
     id = models.AutoField(primary_key=True)
     img = models.ImageField(upload_to='./a/')
@@ -85,6 +93,13 @@ class Accessorie(models.Model):
     price = models.IntegerField()
     stock = models.IntegerField(default=10)
 
+class Ac2(models.Model):
+    id = models.AutoField(primary_key=True)
+    img = models.ImageField(upload_to='./a/')
+    title = models.CharField(max_length=100)
+    description = models.CharField(max_length=500)
+    price = models.IntegerField()
+    stock = models.IntegerField(default=10)
 
 class Gadget(models.Model):
     id = models.AutoField(primary_key=True)

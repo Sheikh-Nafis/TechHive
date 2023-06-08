@@ -54,6 +54,11 @@ def accessories(request):
     context = {'accessorie':accessorie}
     return render(request, 'home/4 accessories.html',context)
 
+def ac2(request):
+    ac2 = Ac2.objects.all()
+    context = {'ac2':ac2}
+    return render(request, 'home/4 ac2.html',context)
+
 def gadget(request):
     gadget = Gadget.objects.all()
     context = {'gadget':gadget}
@@ -68,6 +73,11 @@ def component(request):
     component = Component.objects.all()
     context = {'component':component}
     return render(request, 'home/6 component.html',context)
+
+def component2(request):
+    component2 = Component2.objects.all()
+    context = {'component2':component2}
+    return render(request, 'home/6 component2.html',context)
 
 def gaming(request):
     game = Game.objects.all()
